@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MEMPHIS SHOP – Dakar</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#FFF6F3;--card:#FFFFFF;--ink:#3A2A30;--muted:#7A666D;--pink:#F4C9D2;--pink2:#E8A9B8;--btn:#A94E67;--gold:#B98A4E;--dark:#2B1D22;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#241A1E;--card:#32252B;--ink:#FBEFF2;--muted:#CDB9C0;--pink:#4A2F38;--pink2:#8A5667;--btn:#D77C98;--dark:#171013}}
+:root[data-theme="dark"]{--bg:#241A1E;--card:#32252B;--ink:#FBEFF2;--muted:#CDB9C0;--pink:#4A2F38;--pink2:#8A5667;--btn:#D77C98;--dark:#171013}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 'DM Sans',system-ui,sans-serif}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;margin:0;line-height:1.05}
+a{color:inherit}:focus-visible{outline:3px solid var(--btn);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:9}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:8;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--pink)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px}
+.logo{text-decoration:none;line-height:1.1}.logo b{font:600 1.5rem 'Cormorant Garamond',serif;display:block}.logo small{font-size:.7rem;color:var(--muted);letter-spacing:.08em}
+nav{display:flex;gap:22px}nav a{text-decoration:none;font-size:.95rem}nav a:hover{color:var(--btn)}
+.btn{background:var(--btn);color:#fff;border:0;border-radius:999px;font:700 .9rem 'DM Sans',sans-serif;padding:10px 18px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn:hover{filter:brightness(1.08)}.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--pink2)}
+@media(max-width:700px){nav{display:none}}
+
+.hero{padding:70px 0 80px;background:radial-gradient(60% 80% at 85% 20%,var(--pink),transparent 70%)}
+.badge{display:inline-block;background:var(--pink);border-radius:999px;padding:5px 14px;font-size:.8rem;font-weight:500;margin-bottom:22px}
+.hero h1{font-size:clamp(3.6rem,13vw,7.5rem)}
+.hero h1 i{color:var(--gold);display:block}
+.hero h1 em{font-style:normal;display:block;color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+.hero p{max-width:30em;color:var(--muted);margin:22px 0 28px;font-size:1.1rem}
+
+section{padding:72px 0}
+.tag{font-size:.8rem;color:var(--muted);display:flex;align-items:center;gap:10px;margin-bottom:10px}.tag::before{content:"";width:28px;height:1px;background:var(--ink)}
+h2{font-size:clamp(2.4rem,6vw,3.6rem);margin-bottom:10px}h2 i{color:var(--gold)}
+.sub{color:var(--muted);max-width:34em;margin:0 0 32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
+.card{background:var(--card);border-radius:22px;overflow:hidden;box-shadow:0 8px 24px rgba(120,60,80,.1);display:flex;flex-direction:column}
+.pic{height:200px;display:grid;place-items:center;background:linear-gradient(145deg,var(--pink),var(--pink2));font:italic 500 3.2rem 'Cormorant Garamond',serif;color:#fff}
+.pic img{width:100%;height:100%;object-fit:cover}
+.body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:4px;flex:1}
+.cat{font-size:.72rem;color:var(--gold);font-weight:700}
+.body h3{font-size:1.45rem}.body p{margin:0;color:var(--muted);font-size:.9rem;flex:1}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:12px;gap:8px}.price{font-weight:700}
+
+.pay{background:var(--pink)}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.opt{background:var(--card);border-radius:18px;padding:22px}.opt h3{font-size:1.5rem;margin-bottom:6px}.opt p{margin:0;color:var(--muted);font-size:.92rem}
+.contact .box{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.info{background:var(--card);border-radius:22px;padding:26px}.info p{margin:0 0 12px}.info strong{display:block;font-size:.8rem;color:var(--gold)}
+@media(max-width:700px){.contact .box{grid-template-columns:1fr}}
+footer{background:var(--dark);color:#F6E3E8;padding:36px 0;font-size:.9rem}footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}footer b{font:600 1.5rem 'Cormorant Garamond',serif}
+
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:54px;height:54px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;text-decoration:none;box-shadow:0 6px 16px rgba(0,0,0,.25);z-index:7;font:700 .8rem sans-serif}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(380px,100%);background:var(--card);z-index:20;transform:translateX(105%);transition:transform .25s;display:flex;flex-direction:column;padding:calc(20px + env(safe-area-inset-top,0px)) 20px calc(20px + env(safe-area-inset-bottom,0px));box-shadow:-10px 0 30px rgba(0,0,0,.2)}
+.drawer.open{transform:none}.drawer h2{font-size:2rem}
+#items{flex:1;overflow:auto;margin:14px 0}
+.it{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid var(--pink)}
+.it small{color:var(--muted);display:block}.qty button{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--pink2);background:none;color:var(--ink);cursor:pointer;font-size:1rem}
+.tot{display:flex;justify-content:space-between;font-weight:700;margin-bottom:12px;font-size:1.1rem}
+.empty{color:var(--muted)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.drawer{transition:none}}
+.pays{display:flex;gap:18px;flex-wrap:wrap;margin-top:6px}.pay1{display:flex;align-items:center;gap:8px;font-weight:700;font-size:.9rem}
+.rider{width:100%;max-width:240px;display:block;margin:0 0 10px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#accueil"><b>Memphis Shop</b><small>DAKAR · SÉNÉGAL</small></a>
+  <nav aria-label="Navigation"><a href="#accueil">Accueil</a><a href="#produits">Produits</a><a href="#paiement">Paiement</a><a href="#contact">Contact</a></nav>
+  <button class="btn" id="open" aria-label="Ouvrir le panier">Panier (<span id="cnt">0</span>)</button>
+</div></header>
+
+<main>
+<div class="hero" id="accueil"><div class="wrap">
+  <span class="badge">Nouveautés · Livraison à Dakar</span>
+  <h1>Memphis<i>Shop</i><em>Dakar</em></h1>
+  <p>Votre boutique en ligne pour des pièces douces, élégantes et faciles à commander. Choisissez vos articles, payez simplement, on s’occupe du reste.</p>
+  <a class="btn" href="#produits">Voir les produits</a> <a class="btn ghost" href="#contact">Nous contacter</a>
+</div></div>
+
+<section id="produits"><div class="wrap">
+  <div class="tag">Notre sélection</div>
+  <h2>Nos <i>produits</i></h2>
+  <p class="sub">Ajoutez vos articles au panier puis envoyez votre commande sur WhatsApp. Prix en FCFA.</p>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="paiement" class="pay"><div class="wrap">
+  <div class="tag">Paiement</div>
+  <h2>Simple &amp; <i>sécurisé</i></h2>
+  <p class="sub">Payez comme vous préférez. Nous confirmons chaque commande avec vous avant la livraison.</p>
+  <div class="opts">
+    <div class="opt"><h3>Wave</h3><p>Paiement mobile rapide, sans frais pour vous.</p></div>
+    <div class="opt"><h3>Orange Money</h3><p>Réglez depuis votre téléphone en quelques secondes.</p></div>
+    <div class="opt"><svg class="rider" viewBox="0 0 240 130" role="img" aria-label="Livreur sur sa moto"><path d="M6 70h34M14 86h28" stroke="var(--pink2)" stroke-width="5" stroke-linecap="round"/><circle cx="62" cy="108" r="17" fill="none" stroke="var(--ink)" stroke-width="7"/><circle cx="192" cy="108" r="17" fill="none" stroke="var(--ink)" stroke-width="7"/><path d="M78 106h88l8-24h-52q-12 0-20 14z" fill="var(--btn)"/><path d="M174 82l18 26M174 82l-6-28M160 54h18" stroke="var(--ink)" stroke-width="5" stroke-linecap="round" fill="none"/><rect x="100" y="72" width="48" height="9" rx="4" fill="var(--ink)"/><rect x="62" y="40" width="42" height="34" rx="5" fill="#B98A4E" stroke="var(--ink)" stroke-width="3"/><path d="M127 72l10-27" stroke="var(--pink2)" stroke-width="13" stroke-linecap="round"/><path d="M137 50l27 8" stroke="var(--pink2)" stroke-width="7" stroke-linecap="round"/><path d="M127 74l14 20-2 12" stroke="var(--ink)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="140" cy="32" r="10" fill="#8A5A44"/><path d="M130 32a10 10 0 0 1 20 0z" fill="var(--btn)"/></svg><h3>À la livraison</h3><p>Payez en espèces à la réception de votre colis.</p></div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <div class="tag">Contact</div>
+  <h2>Parlons de <i>votre commande</i></h2>
+  <div class="box">
+    <div class="info">
+      <p><strong>Adresse</strong>Dakar, Sénégal</p>
+      <p><strong>WhatsApp</strong>+221 78 427 74 16</p>
+      <p><strong>E-mail</strong>contact@memphisshop.sn</p>
+      <p><strong>Horaires</strong>Lundi au samedi, 9h – 19h</p><p><strong>Paiements acceptés</strong><span class="pays"><span class="pay1"><svg width="40" height="40" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="11" fill="#1DA1F2"/><path d="M7 25c4-9 8-9 12 0s8 9 12 0 5-5 7-3" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round"/></svg>Wave</span><span class="pay1"><svg width="40" height="40" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="6" fill="#FF7900"/><text x="22" y="29" text-anchor="middle" font-family="DM Sans,Arial,sans-serif" font-weight="700" font-size="17" fill="#fff">OM</text></svg>Orange Money</span></span></p>
+    </div>
+    <div class="info"><h3 style="font-size:1.8rem;margin-bottom:8px">Une question ?</h3><p>Écrivez-nous directement sur WhatsApp, nous répondons rapidement.</p><a class="btn" id="wa2" href="#">Écrire sur WhatsApp</a></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><div><b>Memphis Shop</b><br>Dakar, Sénégal</div><div>© 2026 Memphis Shop. Tous droits réservés.</div></div></footer>
+
+<a class="wa" id="wa" href="#" aria-label="WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+
+<aside class="drawer" id="drawer" aria-label="Panier">
+  <h2>Mon panier</h2>
+  <div id="items"></div>
+  <div class="tot"><span>Total</span><span id="total">0 FCFA</span></div>
+  <a class="btn" id="order" href="#">Commander sur WhatsApp</a>
+  <button class="btn ghost" id="close" style="margin-top:10px">Continuer mes achats</button>
+</aside>
+
+<script>
+/* ===== VOS ARTICLES : modifiez ici les noms, prix et photos =====
+   price : prix de vente en FCFA
+   img   : chemin de la photo (ex. "images/robe.jpg"), laissez "" pour afficher l'initiale
+   Pour ajouter un article, copiez une ligne { ... } et changez l'id (7, 8, 9...) */
+var PRODUCTS=[
+ {id:1,cat:"MODE",name:"Robe Rosée",desc:"Légère et fluide, parfaite pour toutes les occasions.",price:18000,img:""},
+ {id:2,cat:"MODE",name:"Ensemble Poudré",desc:"Haut et pantalon assortis, tissu doux.",price:25000,img:""},
+ {id:3,cat:"ACCESSOIRES",name:"Sac Pivoine",desc:"Format pratique, fermeture sécurisée.",price:15000,img:""},
+ {id:4,cat:"ACCESSOIRES",name:"Foulard Soie",desc:"Motifs délicats, plusieurs coloris.",price:6500,img:""},
+ {id:5,cat:"MAISON",name:"Coussin Velours",desc:"Housse déhoussable, toucher agréable.",price:9000,img:""},
+ {id:6,cat:"BIJOUX",name:"Parure Perle",desc:"Collier et boucles d’oreilles assortis.",price:12000,img:""}
+];
+/* ===== VOTRE NUMÉRO WHATSAPP (format international, sans + ni espaces) ===== */
+var WA="221784277416";
+var cart={};
+function f(n){return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g," ")+" FCFA"}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+var grid=document.getElementById("grid");
+function drawGrid(){
+ grid.innerHTML=PRODUCTS.length?PRODUCTS.map(function(p){
+  var pic=p.img?'<img src="'+esc(p.img)+'" alt="'+esc(p.name)+'">':esc(p.name.charAt(0));
+  return '<article class="card"><div class="pic" aria-hidden="'+(p.img?'false':'true')+'">'+pic+'</div><div class="body"><span class="cat">'+esc(p.cat.toUpperCase())+'</span><h3>'+esc(p.name)+'</h3><p>'+esc(p.desc)+'</p><div class="row"><span class="price">'+f(p.price)+'</span><button class="btn" data-id="'+p.id+'">+ Ajouter</button></div></div></article>'}).join(""):'<p class="empty">Aucun article pour le moment.</p>';
+}
+grid.addEventListener("click",function(e){
+ var b=e.target.closest("button");if(!b)return;
+ if(b.dataset.id){var id=b.dataset.id;cart[id]=(cart[id]||0)+1;render();document.getElementById("drawer").classList.add("open")}
+
+});
+function render(){
+ var h="",t=0,c=0;
+ PRODUCTS.forEach(function(p){var q=cart[p.id];if(!q)return;t+=q*p.price;c+=q;
+  h+='<div class="it"><div>'+esc(p.name)+'<small>'+f(p.price)+'</small></div><div class="qty"><button data-m="'+p.id+'" aria-label="Retirer">−</button> '+q+' <button data-p="'+p.id+'" aria-label="Ajouter">+</button></div></div>'});
+ document.getElementById("items").innerHTML=h||'<p class="empty">Votre panier est vide.</p>';
+ document.getElementById("total").textContent=f(t);document.getElementById("cnt").textContent=c;
+ var msg="Bonjour Memphis Shop, je souhaite commander :\n";
+ PRODUCTS.forEach(function(p){if(cart[p.id])msg+="- "+cart[p.id]+" x "+p.name+" ("+f(p.price)+")\n"});
+ document.getElementById("order").href=c?"https://wa.me/"+WA+"?text="+encodeURIComponent(msg+"Total : "+f(t)):"#";
+}
+document.getElementById("items").addEventListener("click",function(e){var m=e.target.dataset.m,p=e.target.dataset.p;if(m){cart[m]--;if(cart[m]<=0)delete cart[m]}if(p)cart[p]++;render()});
+document.getElementById("open").onclick=function(){document.getElementById("drawer").classList.add("open")};
+document.getElementById("close").onclick=function(){document.getElementById("drawer").classList.remove("open")};
+var link="https://wa.me/"+WA;["wa","wa2"].forEach(function(i){document.getElementById(i).href=link});
+drawGrid();render();
+
+</script>
+
+</body>
+</html>
